@@ -1,0 +1,18 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black; /* 背景设置为黑色 */
+}
+
+.light {
+    position: absolute;
+    width: 150px; /* 光球的大小 */
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 70%); /* 光球的光影效果 */
+    border-radius: 50%; /* 圆形 */
+    filter: blur(20px); /* 模糊效果 */
+    transform: translate(-50%, -50%); /* 让光球中心对准鼠标 */
+    pointer-events: none; /* 防止光球阻挡鼠标事件 */
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/static/third-party/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/NarBar.css">
+    <link rel="stylesheet" href="/static/css/showph.css">
+    <style>
+        /* 使用 !important 提升样式优先级 */
+
+        body {
+            background-color: rgba(29, 88, 70, 0.5);
+        }
+
+        div.NAVBAR {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="/static/third-party/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <div class="NAVBAR">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light-orange">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Away's blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-submenu">
+                                <li><a class="drop-item" style="text-align: center;"
+                                        href="https://space.bilibili.com/470833519">bilibili</a></li>
+                                <li><a class="drop-item" style="text-align: center;"
+                                        href="https://github.com/AwayC/">Github</a></li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script>
+            menuItems.forEach(item => {
+                item.addEventListener('mouseenter', function () {
+                    // 移除所有菜单项的选中状态
+                    menuItems.forEach(i => i.classList.remove('active'));
+
+                    // 为当前悬停的菜单项添加选中状态
+                    this.classList.add('active');
+
+                    // 如果悬停的是下拉菜单项，保持其父项的选中状态
+                    let parent = this.parentElement;
+                    while (parent && parent.classList.contains('drop-item')) {
+                        parent.classList.add('active');
+                        parent = parent.parentElement;
+                    }
+                });
+
+                item.addEventListener('mouseleave', function () {
+                    // 移除当前菜单项的选中状态
+                    this.classList.remove('active');
+                });
+            });
+        </script>
+    </div>
+
+    <!---------------------------------------------------------------------------------->
+    <div class="gallery">
+        <!-- 图片1 -->
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="/static/images/back1.jpg" alt="Image 1">
+            </div>
+            <div class="info">
+                <h3>图片1</h3>
+                <p>这是图片1的介绍内容。</p>
+            </div>
+        </div>
+        <!-- 图片2 -->
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="/static/images/back2.jpg" alt="Image 2">
+            </div>
+            <div class="info">
+                <h3>图片2</h3>
+                <p>这是图片2的介绍内容。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="/static/images/back3.jpg" alt="Image 2">
+            </div>
+            <div class="info">
+                <h3>图片2</h3>
+                <p>这是图片2的介绍内容。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="/static/images/back4.jpg" alt="Image 2">
+            </div>
+            <div class="info">
+                <h3>图片2</h3>
+                <p>这是图片2的介绍内容。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="/static/images/back5.jpg" alt="Image 2">
+            </div>
+            <div class="info">
+                <h3>图片2</h3>
+                <p>这是图片2的介绍内容。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="/static/images/back6.jpg" alt="Image 2">
+            </div>
+            <div class="info">
+                <h3>图片2</h3>
+                <p>这是图片2的介绍内容。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="/static/images/back7.jpg" alt="Image 2">
+            </div>
+            <div class="info">
+                <h3>图片2</h3>
+                <p>这是图片2的介绍内容。</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="/static/images/back8.jpg" alt="Image 2">
+            </div>
+            <div class="info">
+                <h3>图片2</h3>
+                <p>这是图片2的介绍内容。</p>
+            </div>
+        </div>
+        <!-- 更多图片... -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+.navbar {
+    padding: 0 auto; 
+    display: inline-block;
+    border-radius: 0 0 15px 15px;
+}
+
+.bg-light-orange {
+    background-color: rgba(255, 188, 82, 0.5) !important;
+    /* 浅橘色，透明度 0.7 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+
+}
+
+.navbar-nav .nav-link {
+    transition: box-shadow 0.3s ease;
+    /* 添加过渡效果 */
+}
+
+/* 导航栏链接悬浮时的样式 */
+.navbar-nav .nav-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 悬浮时添加阴影 */
+}
+
+.navbar-brand {
+    font-weight: bolder;
+    color: #313885;
+    /* 初始颜色 */
+    transition: color 0.3s ease;
+    /* 为颜色过渡添加 0.3 秒的动画效果 */
+}
+
+/* 导航栏品牌悬浮时的样式 */
+.navbar-brand:hover {
+    color: #85848b;
+    /* 悬浮时的颜色 */
+}
+
+.dropdown-submenu {
+    list-style: none;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    /* 初始透明度为 0 */
+    visibility: hidden;
+    /* 初始隐藏 */
+    transform: translateY(-10px);
+    /* 初始向上偏移 */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    /* 添加过渡效果 */
+}
+
+.dropdown:hover .dropdown-submenu {
+    opacity: 1;
+    /* 透明度变为 1 */
+    visibility: visible;
+    /* 显示 */
+    transform: translateY(0);
+    /* 偏移归零 */
+}
+
+.dropdown-submenu li a {
+    display: block;
+    color: lightslategray;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-submenu li a:hover {
+    background-color: #555;
+}
+
+.dropdown-submenu li:last-child a {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dropdown-submenu li {
+    position: relative;
+}
