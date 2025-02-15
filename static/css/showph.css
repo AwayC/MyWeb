@@ -1,19 +1,19 @@
 .gallery {
     display: flex;
+    width: 1000px;
+    margin: 25px auto;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 0 20px 0 20px;
 }
 
 .card {
     position: relative;
-    width: 200px;
-    height: 300px;
-    overflow: hidden;
+    width: 150px;
+    height: 150px;
     border: none; 
     border-radius: 10px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); /* 图片阴影 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-wrapper {
@@ -21,8 +21,10 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    
-    
+    border: none; 
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3); /* 图片阴影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 img { 
@@ -47,20 +49,25 @@ img {
 .info {
     position: absolute;
     top: 0;
-    left: 220px; /* 图片右侧 */
+    left: 105%; /* 图片右侧 */
     width: 200px;
+    height: 100%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(210, 147, 36, 0.9);
     border-radius: 10px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    overflow: hidden;
+    /* transform: translateX(100%); 初始位置 */
+    transition: opacity 0.5s ease; /* 名片介绍 */
     pointer-events: none;
+    z-index: 99; 
 }
 
 /* 悬浮效果 */
-.card:hover {
+.image-wrapper:hover {
     transform: scale(1.1); /* 图片放大 */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* 阴影加深 */
+    z-index: 99;
 }
 
 .card:hover .light-effect {
@@ -69,6 +76,7 @@ img {
 
 .card:hover .info {
     opacity: 1; /* 显示名片介绍 */
+     /* 移动到图片右侧 */
 }
 
 /* 打光动画 */
@@ -81,7 +89,7 @@ img {
     }
 }
 
-.card:hover::after {
+.image-wrapper:hover::after {
     content: '';
     position: absolute;
     top: 0;

@@ -1,3 +1,4 @@
+
 .navbar {
     padding: 0 auto; 
     display: inline-block;
@@ -11,7 +12,7 @@
 
 }
 
-.navbar-nav .nav-link {
+.navbar-nav .nav-item {
     transition: box-shadow 0.3s ease;
     /* 添加过渡效果 */
 }
@@ -38,7 +39,7 @@
 
 .dropdown-submenu {
     list-style: none;
-    background-color: #333;
+    background-color: rgba(109, 109, 97, 0.7);
     position: absolute;
     top: 100%;
     left: 0;
@@ -54,6 +55,7 @@
     /* 初始向上偏移 */
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     /* 添加过渡效果 */
+    z-index: 999; /* 确保子菜单在其他元素之上 */
 }
 
 .dropdown:hover .dropdown-submenu {
@@ -67,14 +69,16 @@
 
 .dropdown-submenu li a {
     display: block;
-    color: lightslategray;
+    padding: 3px 0; 
+    color: rgb(209, 215, 218);
     padding: 10px 15px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease color 0.3s ease;
 }
 
 .dropdown-submenu li a:hover {
-    background-color: #555;
+    color: rgb(61, 152, 197);
+    background-color: rgba(90, 88, 88, 0.5);
 }
 
 .dropdown-submenu li:last-child a {
